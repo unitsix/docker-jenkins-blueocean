@@ -20,4 +20,4 @@ COPY plugins.txt /usr/share/jenkins/plugins.txt
 RUN xargs /usr/local/bin/install-plugins.sh < /usr/share/jenkins/plugins.txt
 
 # docker build -f Dockerfile . -t jenkins:blueocean
-# docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -v /Users/ryan.stockdale/Documents/dockerfiles/docker-jenkins/workspace:/var/jenkins_home/workspace/ -p 8085:8080 --name jenkins jenkins:blueocean 
+# docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -v /PATH/TO/REPO/workspace:/var/jenkins_home/workspace/ -p 8085:8080 --name jenkins jenkins:blueocean 
